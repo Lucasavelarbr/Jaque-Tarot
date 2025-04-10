@@ -1,0 +1,453 @@
+/* Variáveis de Cores */
+
+:root {
+    /* Modo Claro */
+    --cor-fundo: #f4e7f6; /* Azul lavanda suave */
+    --cor-fundo-sobre: #dda2fb; /* Azul ametista */
+    --cor-color: #430c52; /* Azul escuro para contraste */
+    --cor-hover: #e0155c; /* Roxo místico */
+
+    /* Modo Escuro */
+    --cor-fundo-dark: #0f0f0f; /* Azul petróleo */
+    --cor-fundo-sobre-dark: #28031c; /* Azul meia-noite */
+    --cor-color-dark: #dda2fb; /* Azul prateado para texto */
+    --cor-hover-dark: #820e36; /* Azul violeta brilhante */
+
+}
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Corpo */
+body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 10px;
+    background-color: var(--cor-fundo);
+    background-blend-mode: color;
+    color: var(--cor-color);
+}
+
+/* Modo escuro */
+.dark {
+    background-color: var(--cor-fundo-dark);
+    color: var(--cor-color-dark);
+}
+
+/* Modo escuro - Cabeçalho */
+.dark nav {
+    background-color: transparent;
+    color: var(--cor-color-dark);
+}
+
+/* MENU NAV */
+.logo{
+    text-decoration: none;
+    color: var(--cor-color);
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.menu-desktop{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-desktop ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu-desktop ul li {   
+    margin: 0 15px;
+}
+
+.menu-desktop ul li a {
+    text-decoration: none;
+    color: var(--cor-color);
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu-desktop ul li a:hover {
+    color: var(--cor-hover);
+}
+
+.bi-moon{
+    font-size: 1rem;
+    margin: 0;
+    left: 0;
+}
+
+/* Modo escuro - Menu */
+.dark .logo{
+    color: var(--cor-color-dark);
+}
+
+.dark .menu-desktop{
+    background-color: var(--cor-fundo-dark);
+}
+
+.dark .menu-desktop ul li a {
+    color: var(--cor-color-dark);
+}
+
+.dark .menu-desktop ul li a:hover {
+    color: var(--cor-hover-dark);
+}
+
+
+/* Estilização da Seção Sobre */
+
+.img {
+    width: 100%;
+    max-width: 18.75em;
+    height: auto;
+    margin-top: 100px;
+    border-radius: 50%; 
+    border: 4px solid #b967f8; 
+    box-shadow: 0 0 10px 7px rgba(21, 21, 21, 0.385); 
+    object-fit: cover; 
+}
+
+.dark .img{
+    border: 4px solid #b967f8;
+    box-shadow: 0 0 10px 2px rgba(226, 226, 226, 0.385); 
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #981af8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: .5rem;
+    right: .2rem;
+    background-color: var(--cor-hover);
+    color: var(--cor-color-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem 0.7rem;
+    font-size: .5rem;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    opacity: 0.8;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+
+#about {
+    margin: 6.25em auto; 
+    max-width: 50em;   
+    width: 90%;         
+    background: var(--cor-fundo-sobre);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    text-align: center;
+    color: var(--cor-fundo-sobre-dark);
+    line-height: 1.6;
+    padding: 20px; 
+}
+
+/* Modo escuro - Seção Sobre */
+.dark #about {
+    background: var(--cor-fundo-sobre-dark);
+    color: var(--cor-color-dark);
+}
+
+/* Estilizando o Título */
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: rgb(9, 9, 9);
+}
+
+/* Modo escuro - Título */
+.dark #about h2 {
+    color: var(--cor-fundo);
+}
+
+/* Parágrafo */
+#about p {
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Destacando frases importantes */
+#about p strong {
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* Modo escuro - Texto */
+.dark #about p{
+    color: var(--cor-color-dark);
+}
+
+.dark #about p strong {
+    color: var(--cor-fundo);
+}
+
+/* Container principal dos cards */
+.cards-atuacao {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Título da seção */
+  .cards-atuacao h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #4b0082;
+  }
+  
+  /* Card individual */
+ .card-atuacao {
+    flex: 1 1 300px;
+    background-color: var(--cor-fundo-sobre);
+    color: black; 
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Ícones e títulos dos cards */
+  .card-atuacao h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #5a2a83;
+  }
+  
+  /* Descrição do card */
+  .card-atuacao p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  .dark .card-atuacao {
+    flex: 1 1 300px;
+    background-color: var(--cor-color);
+    color: var(--cor-fundo); 
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .dark .card-atuacao h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--cor-color-dark);
+  }
+
+ .dark .card-atuacao p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cor-fundo-sobre);
+  }
+
+
+  .click{
+    margin-top: 5rem;
+  }
+
+/* Layout dos Cards */
+.zodiac-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Container do Card */
+.card-container {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    margin-left: 50px;
+    width: 15.625em;
+    height: 9.375em;
+    perspective: 1000px; /* Adiciona profundidade ao efeito */
+    cursor: pointer;
+}
+
+/* Esconde o input checkbox */
+.card-container input {
+    display: none;
+}
+
+/* Estrutura do Card */
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Frente e Verso */
+.card-frente, .card-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Cores Modo Claro */
+.card-frente {
+    color: var(--cor-color);
+    background-color:#ecc5ff;
+}
+
+.card-verso {
+    background: #4a148c;
+    color: #e3d3f7;
+    transform: rotateY(180deg);
+}
+
+/* Quando o checkbox for marcado, gira o card */
+.card-container input:checked + .card {
+    transform: rotateY(180deg);
+}
+
+/* Modo Escuro */
+.dark .card-frente {
+    background: var(--cor-color);
+    color: var(--cor-fundo-sobre);
+}
+
+.dark .card-verso {
+    background: #d99ff7;
+    color: var(--cor-color);
+}
+
+/* Inputs e textarea */
+input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    background: #fff;
+    color: black;
+}
+
+/* Modo escuro - Inputs */
+.dark input, .dark textarea {
+    background: #ffffff;
+    color: black;
+    border: none;
+}
+
+/* Botão */
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    transition: background 1s ease;
+}
+
+/* Modo escuro - Botão */
+.dark button {
+    background: transparent;
+    color: #f1eded;
+}
+
+/* Rodapé */
+footer {
+    background-color: transparent;
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+}
+
+/* Modo escuro - Rodapé */
+.dark footer {
+    background: transparent;
+    color: #fff;
+}
+
+footer p{
+    font-size: .5em;
+}
+
+/* Ícones sociais */
+.icons {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 1rem;
+}
+

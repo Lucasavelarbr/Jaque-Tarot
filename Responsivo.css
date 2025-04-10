@@ -1,0 +1,84 @@
+@media screen and (min-width: 57.5em) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 57.5em) {
+    .logo{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    #about {
+        text-align: start;
+    }
+    
+    .zodiac-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 50em){
+    .logo{
+        font-size: 2em;
+    }
+
+    .cards-atuacao {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .card-atuacao {
+        width: 90%;
+      }
+  
+      #backToTop {
+          display: block;
+        }
+    }
+
+
+@media screen and (min-width: 42.5em) {
+    .btn-whatsapp{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 42.5em) {
+    .logo{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .menu-desktop li{
+        display: none;
+    }
+    
+    #about p{
+        text-align: left;
+    }
+    
+    .zodiac-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 30px;
+        -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
+        user-select: none; /* Impede a seleção de texto/imagens */
+        touch-action: manipulation; /* Melhora a resposta ao toque */
+    }
+}
+
+@media screen and (max-width: 26.5em) {
+    .btn-whatsapp{
+        margin-top: 25px;
+    }
+
+    #insta{
+        display: none;
+    }
+}
+
+
+
