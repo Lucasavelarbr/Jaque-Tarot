@@ -117,25 +117,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== Menu Mobile =====
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuLinks = document.querySelector('.menu-links');
-    const navLinks = document.querySelectorAll('.menu-links a');
+const moon = document.getElementById("moon");
 
-    if (menuToggle && menuLinks) {
-        menuToggle.addEventListener('click', () => {
-            menuLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
+// Verifica se há um tema salvo no localStorage e aplica
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    moon.classList.remove("bi-moon");
+    moon.classList.add("bi-sun");
+}
 
-        if (navLinks.length > 0) {
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menuLinks.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                });
-            });
-        }
+// Evento de clique para alternar o modo escuro
+moon.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark");
+
+    if (isDark) {
+        moon.classList.remove("bi-moon");
+        moon.classList.add("bi-sun");
+        localStorage.setItem("theme", "dark"); // Salva a preferência no localStorage
+    } else {
+        moon.classList.add("bi-moon");
+        moon.classList.remove("bi-sun");
+        localStorage.setItem("theme", "light"); // Salva a preferência no localStorage
     }
+});
 
 });
