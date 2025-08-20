@@ -123,6 +123,32 @@ body {
     color: var(--cor-hover-dark);
 }
 
+/* Menu mobile */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-texto);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark .menu-toggle .bar {
+    background-color: var(--cor-texto-dark);
+}
+
+
 /* Estilização da Seção Sobre */
 
 .img {
@@ -222,6 +248,99 @@ body {
     color: var(--cor-fundo);
 }
 
+/* Numerologia */
+
+.numerology-container {
+    max-width: 38rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.numerology-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 5%;
+    margin: 4%;
+    background-color: var(--cor-color-dark);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    color: #000;
+}
+
+.dark .numerology-form {
+    background-color: var(--cor-color);
+}
+
+.numerology-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-fundo-sobre-dark);
+}
+
+.dark .numerology-form label {
+    color: var(--cor-color-dark);
+}
+
+.numerology-form input {
+    padding: 0.8rem;
+    border: none;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.dark .numerology-form input {
+    background-color: var(--cor-fundo-sobre-dark);
+    border-color: var(--cor-color-dark);
+    color: var(--cor-fundo-sobre);
+}
+
+.numerology-form button {
+    padding: 1rem 2rem;
+    background-color: var(--cor-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark .numerology-form button {
+    background-color: var(--cor-fundo-sobre-dark);
+    color: var(--cor-hover);
+}
+
+.numerology-form button:hover {
+    background-color: #A6164B;
+}
+
+.dark .numerology-form button:hover {
+    background-color: #FF9ED8;
+}
+
+.numerology-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: transparent;
+}
+
+#numerology-number {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.dark #numerology-number {
+    color: var(--cor-primaria-dark);
+}
+
+#numerology-meaning {
+    line-height: 1.6;
+}
+
 /* Container principal dos cards */
 .cards-atuacao {
     padding: 2rem;
@@ -265,6 +384,11 @@ body {
   }
   
   /* Descrição do card */
+
+.titulo-atuacao{
+    margin-top: 70px;
+}
+
   .card-atuacao p {
     font-size: 1rem;
     line-height: 1.5;
