@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-
     // ===== Tema Dark/Light =====
     const themeToggleBtn = document.getElementById('theme-toggle');
     const moonIcon = document.getElementById('moon-icon');
@@ -117,16 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-const moon = document.getElementById("moon");
+    const moon = document.getElementById("moon");
 
-// Verifica se há um tema salvo no localStorage e aplica
-if (localStorage.getItem("theme") === "dark") {
+    // Verifica se há um tema salvo no localStorage e aplica
+    if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
     moon.classList.remove("bi-moon");
     moon.classList.add("bi-sun");
-}
+    }
 
-// Evento de clique para alternar o modo escuro
+    // Evento de clique para alternar o modo escuro
 moon.addEventListener("click", () => {
     const isDark = document.body.classList.toggle("dark");
 
@@ -139,6 +137,4 @@ moon.addEventListener("click", () => {
         moon.classList.remove("bi-sun");
         localStorage.setItem("theme", "light"); // Salva a preferência no localStorage
     }
-});
-
 });
