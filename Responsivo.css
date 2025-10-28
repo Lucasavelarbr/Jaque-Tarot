@@ -1,24 +1,41 @@
+.btn-whatsapp{
+    display: none;
+}
 
-
-@media screen and (max-width: 56.938em) {
+@media screen and (max-width: 920px) {
     .logo{
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
+
+     .menu-desktop li{
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex; 
+    }
+}
+
+    .bi-moon{
+        display: none;
+    }
+
 
     #about {
         text-align: start;
     }
     
+    
     .zodiac-cards{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
-@media screen and (max-width: 50em){
+
+@media screen and (max-width: 760em){
     .logo{
-        font-size: 2em;
+        font-size: 1rem;
     }
 
     .cards-atuacao {
@@ -29,36 +46,17 @@
       .card-atuacao {
         width: 90%;
       }
-  
-      #backToTop {
-          display: block;
-        }
-
-       .btn-whatsapp{
-        margin-top: 10%;
-       } 
-
+      
         .zodiac-cards{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
     }
 
-
-@media screen and (min-width: 48em) {
-    .btn-whatsapp{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 46.5em) {
     .logo{
         font-size: 1em;
         font-weight: bold;
-    }
-
-    .menu-desktop li{
-        display: none;
     }
     
     #about p{
@@ -75,10 +73,6 @@
         user-select: none; 
         touch-action: manipulation; 
     }
-
-    .btn-whatsapp{
-        margin-top: 10%;
-    }
 }
 
 @media screen and (max-width: 40em) { 
@@ -92,6 +86,11 @@
         user-select: none; 
         touch-action: manipulation; 
 }
+
+    .btn-whatsapp{
+        display: block;
+        margin: 30px;
+    }
 
 
 }
