@@ -6,7 +6,14 @@
     <title>Jaqueline Moraes - Tarot</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Responsivo.css" media="screen"> 
-         <!-- Icones-->
+ 
+    <!-- favicon-->
+   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <!-- Icones-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -18,15 +25,32 @@
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#zodiac">Signos</a></li>
                         <li><a href="https://wa.me/+5511954766524" target="_blank" class="">Contato</a></li>
-
+                        <li>
                         <button><i class="bi-moon" id="moon"></i></button>
+                        </li>
                     </ul> 
             </nav> 
+
+        <!-- Menu Mobile -->
+            <button class="menu-toggle" id="toggle-menu" aria-label="Abrir menu lateral" aria-expanded="false">
+                Menu
+            </button>
+        
+        <nav class="menu-mobile">
+            
+            <ul id="menu-mobile">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#zodiac">Signos</a></li>
+                <li><a href="https://wa.me/+5511954766524" target="_blank">Contato</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Alternar modo escuro">
+                        <i class="bi-moon" id="moon"></i>
+                    </button>
+                </li>
+            </ul>   
+        </nav>
     </header>
     <main>
-
-        <button id="backToTop" aria-label="Voltar ao topo">↑ Topo</button>
-       
         <img class="img" src="IMG/jaque.jpeg" alt="foto de Jaqueline: Negra, cabelos cacheados, usando óculos, sorrindo e segurando cartas de Trot em suas mãos.">
 
         <a href="https://wa.me/+5511954766524" target="_blank" class="btn-whatsapp">Faça um Orçamento</a>
@@ -44,7 +68,8 @@
 
         <section id="numerologia" class="fade-in">
         <h2 class="section-title">Sua Jornada Pessoal</h2>
-        <p style="text-align: center; margin-top: 1rem;">
+        <br>
+        <p>
           Calcule seu Número de Caminho da Vida e descubra a energia que guia o
           seu destino.
         </p>
@@ -91,10 +116,13 @@
         </section>
 
         <section id="zodiac">
+            
             <h2 class="click">Clique nos cards!</h2>
+            
             <div class="zodiac-cards">
+                
                 <label class="card-container">
-                    <input type="checkbox">
+                    <input type="checkbox" tabindex="0" aria-label="Virar card de Áries">
                     <div class="card">
                         <div class="card-frente">♈ Áries</div>
                         <div class="card-verso">O Explosivo</div>
@@ -102,7 +130,7 @@
                 </label>
 
                 <label class="card-container">
-                    <input type="checkbox">
+                    <input type="checkbox" tabindex="0" aria-label="Virar card de Áries">
                     <div class="card">
                         <div class="card-frente">♉ Touro</div>
                         <div class="card-verso">O Teimoso</div>
@@ -110,14 +138,14 @@
                 </label>
 
                 <label class="card-container">
-                    <input type="checkbox">
+                    <input type="checkbox" tabindex="0" aria-label="Virar card de Áries">
                     <div class="card">
                         <div class="card-frente">♊ Gêmeos</div>
                         <div class="card-verso">O Sarcástico</div>
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♋ Câncer</div>
@@ -125,7 +153,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♌ Leão</div>
@@ -133,7 +161,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♍ Virgem</div>
@@ -141,7 +169,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♎ Libra</div>
@@ -149,7 +177,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♏ Escorpião</div>
@@ -157,7 +185,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♐ Sagitário</div>
@@ -165,7 +193,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♑ Capricórnio</div>
@@ -173,7 +201,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♒ Aquário</div>
@@ -181,7 +209,7 @@
                     </div>
                 </label>
 
-                <label class="card-container">
+                <label class="card-container" tabindex="0" aria-label="Virar card de Áries">
                     <input type="checkbox">
                     <div class="card">
                         <div class="card-frente">♓ Peixes</div>

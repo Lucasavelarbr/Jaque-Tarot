@@ -45,7 +45,7 @@ body {
 }
 
 /* Modo escuro */
-.dark {
+.dark body{
     background-color: var(--cor-fundo-dark);
     color: var(--cor-color-dark);
 }
@@ -124,30 +124,52 @@ body {
 }
 
 /* Menu mobile */
+.menu-mobile{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--cor-color-dark);
+    width: 50%;
+    height: 100vh;
+    z-index: 2;
+    box-shadow: 0 0 20px var(--cor-fundo-dark);
+    transform: translateX(+100%);
+    transition: transform .6s ease-in-out;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.menu-mobile.open{
+    transform: translateX(0)
+}
+/* Botão de Menu*/
+.menu-toggle{
+    position: fixed;
+    top: 13px;
+    right: 20px;
+    z-index: 5;
+    font-size: 1.2rem;
+}
+
+.menu-mobile ul{
+    list-style-type: none;
+    margin-top: 100px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.menu-toggle .bar {
-    width: 100%;
-    height: 3px;
-    background-color: var(--cor-texto);
-    transition: all 0.3s ease-in-out;
+.menu-mobile li{
+    margin-bottom: 50px;
 }
 
-.dark .menu-toggle .bar {
-    background-color: var(--cor-texto-dark);
+.menu-mobile a{
+    text-decoration: none;
+    color: #28031c;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-
 
 /* Estilização da Seção Sobre */
 
@@ -201,7 +223,7 @@ body {
     text-align: left;
     border-radius: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
-    color: var(--cor-fundo-sobre-dark);
+    color: var(--cor-color);
     line-height: 1.6;
     padding: 20px; 
 }
@@ -228,14 +250,14 @@ body {
 #about p {
     font-size: 1.1rem;
     text-align: left;
-    color: var(--cor-fundo-sobre-dark);
+    color: var(--cor-color);
     padding: 10px;
     font-weight: 400;
 }
 
 /* Destacando frases importantes */
 #about p strong {
-    color: var(--cor-hover);
+    color: var(--cor-hover-dark);
     font-size: 1.2rem;
 }
 
@@ -379,7 +401,7 @@ body {
     align-items: center;
     justify-content: start;
     gap: 0.5rem;
-    color: var(--cor-hover);
+    color: var(--cor-color);
   }
   
   /* Descrição do card */
@@ -392,7 +414,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     text-align: left;
-    color: var(--cor-hover-dark);
+    color: var(--cor-fundo-sobre-dark);
   }
   
   .dark .card-atuacao {
@@ -551,10 +573,12 @@ button {
 
 /* Rodapé */
 footer {
-    background-color: transparent;
+    background-color: var(--cor-fundo);
     text-align: center;
     padding: 1rem;
     color: #000;
+    width: 100%;
+    height: 100px;
 }
 
 /* Modo escuro - Rodapé */

@@ -23,48 +23,45 @@
         });
     }
 
-    // ===== Fade-in nas seções =====
-    const faders = document.querySelectorAll('.fade-in, .fade-in-right, .fade-in-up, .fade-in-left');
-    if (faders.length > 0) {
-        const appearOptions = {
-            threshold: 0.3,
-            rootMargin: "0px 0px -50px 0px"
-        };
+    // ====== Menu Mobile
+    
+    const toggleMenu = document.getElementById("toggle-menu")
+    const menu = document.querySelector(".menu-mobile")
 
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
+    toggleMenu.addEventListener("click", () =>{
+        menu.classList.toggle("open")
+    })
 
-        faders.forEach(fader => appearOnScroll.observe(fader));
-    }
+    //  ==== Fecha o menu ao clicar em algum ítem
+
+    document.querySelectorAll("a").forEach(link =>{
+       link.addEventListener("click", () =>{
+        menu.classList.remove("open")
+       }) 
+    })
+
+    // === Fecha ao clicar fora
+    document.addEventListener("click", (e) =>{
+        const ClicksideMenu = menu.contains(e.target)
+        const ClickButton = toggleMenu.contains(e.target)
+
+        if (!ClickButton && !ClicksideMenu){
+            menu.classList.remove("open")
+        }
+    })
+
+    // Fecha ao clicar com o "ESC" do teclado
+    document.addEventListener("keydown", (e) =>{
+        if(e.key === "Escape"){
+            menu.classList.remove("open")
+        }
+    })
 
     // ===== Cards de Signos/Tarot =====
     const zodiacCards = document.querySelectorAll('.card-container');
     if (zodiacCards.length > 0) {
         zodiacCards.forEach(card => {
             card.addEventListener('click', () => card.classList.toggle('flipped'));
-        });
-    }
-
-    // ===== Botão Back to Top =====
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 400) {
-                backToTopBtn.style.display = 'flex';
-                backToTopBtn.style.opacity = '1';
-            } else {
-                backToTopBtn.style.display = 'none';
-                backToTopBtn.style.opacity = '0';
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
